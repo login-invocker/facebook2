@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.WatchFrament">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtWatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Watch"
+            android:textSize="@dimen/_22sdp" />
+
+        <ImageView
+            android:id="@+id/btn_search_watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtWatch"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_toLeftOf="@id/btn_list_watch"
+            android:src="@drawable/ic__list_person_watch"
+
+            />
+
+        <ImageView
+            android:id="@+id/btn_list_watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtWatch"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_search" />
+    </RelativeLayout>
+</FrameLayout>
