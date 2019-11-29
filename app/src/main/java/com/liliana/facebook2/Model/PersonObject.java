@@ -5,13 +5,16 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "t_object")
 public class PersonObject {
-    @PrimaryKey
-    private int iD;
+    @PrimaryKey(autoGenerate = true)
+    public int fie_id;
     private String name;
+
     private int Avatar;
     private int coverImage;
     private String word;
     private String address;
+    public PersonObject() {
+    }
 
     public String getAddress() {
         return address;
@@ -22,7 +25,7 @@ public class PersonObject {
     }
 
     public PersonObject(int iD, String name, int avatar, int coverImage, String word, String address) {
-        this.iD = iD;
+        this.fie_id = iD;
         this.name = name;
         Avatar = avatar;
         this.coverImage = coverImage;
@@ -30,12 +33,12 @@ public class PersonObject {
         this.address = address;
     }
 
-    public int getiD() {
-        return iD;
+    public int getFie_iD() {
+        return fie_id;
     }
 
-    public void setiD(int iD) {
-        this.iD = iD;
+    public void setFie_iD(int iD) {
+        this.fie_id = iD;
     }
 
     public String getName() {

@@ -11,18 +11,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="8">
-
-        <ImageView
-            android:id="@+id/img_me"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="fitXY" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar_me"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/tung_me"
+                android:layout_margin="@dimen/_8sdp"/>
+        </LinearLayout>
 
         <TextView
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_height="wrap_content"
-            android:layout_weight="6"
+            android:layout_weight="7"
             android:background="@drawable/share_rounded_corner_with_border"
             android:padding="@dimen/_4sdp"
             android:src="@drawable/ic_add_image"
@@ -31,10 +37,12 @@
             android:typeface="monospace" />
 
         <ImageView
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_30sdp"
             android:layout_weight="1"
-            android:src="@drawable/ic_add_image" />
+            android:src="@drawable/ic_add_image"
+            android:layout_marginLeft="@dimen/_14sdp"/>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
